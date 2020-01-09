@@ -8,13 +8,29 @@
     <div id="form">
       グループ名
       <input type="text" name="name_g" id="name_g">
-      <p>
+      <p id="name_u">
         ユーザ名
-        <input type="text" name="name_u" id="name_u">
+        <input type="text" name="name_u">
+        <input type="button" value="×" id="removeuser">
       </p>
-      <input type="button" value="+">
+      <input type="button" value="+" id="adduser" style="width: 200px;margin: 3px;">
+
     </div>
-    <input type="button" value="+">
+    <input type="button" value="+" id="addgroup">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function() {
+
+        $('#adduser').click(function() {
+          $(this).before('<p>ユーザ名<input type="text" name="name_u"></p>');
+        });
+
+        $('#removeuser').click(function() {
+          $('#name_u').remove();
+        });
+
+      });
+    </script>
   </body>
 
 
