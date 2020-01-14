@@ -1,20 +1,18 @@
 $(function() {
 
   $('#adduser').click(function() {
-    $(this).before('<p>');
+    $(this).before('<p id="name_u">ユーザ名<input type="text" name="name_u"><input type="button" value="×" id="removeuser"></p>');
   });
 
-  $('#removeuser').click(function() {
+  // $('#removeuser').click(function() {
+  //   $('#name_u').remove();
+  // });
+
+  $(document).on('click', '#removeuser', function() {
+    
     $('#name_u').remove();
-  });
 
-  var user = $('<p>');
-  var name_u = $('<input type="text">');
-  var remove_u = $('<input type="button" value="×">');
-
-  user.append(name_u);
-  user.append(remove_u);
-
+})
   
 
 });
