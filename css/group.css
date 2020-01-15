@@ -1,0 +1,50 @@
+body {
+  text-align: center;
+}
+
+#group {
+  width:40%;
+  border: 1px solid #a9a9a9;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.name_u {
+  width: 70%;
+}
+
+.name_g {
+  width:80%;
+}
+
+#user {
+  background-color: #ffffff;
+  width: 90%;
+  text-align: right;
+  margin-left: auto;
+}
+
+#adduser { 
+  background-color: #dcdcdc;
+  border: 2px solid #a9a9a9;
+  width: 90%;
+  margin: 0px; }
+
+#addgroup { 
+  background-color: #dcdcdc;
+  border: 2px solid #a9a9a9;
+  width: 500px;
+  margin-top: 20px;
+}
+
+#removegroup {
+  margin-top: 25px;
+}
+
+.remove {
+  background-color: #dcdcdc;
+  border: 2px solid #a9a9a9;
+  padding: 0 10px;
+}

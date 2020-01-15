@@ -5,19 +5,25 @@
   <title>入力枠の追加</title>
   <script type="text/javascript" src="../scripts/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="../scripts/group001.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/group.css">
 </head>
 <body>
-  <div>
+  <div id="group">
     
     グループ名
-    <input type="text" name="name_g" id="name_g">
-    <p id="name_u">
+    <input type="text" name="name_g" class="name_g">
+    
+    <p id="user">
       ユーザ名
-      <input type="text" name="name_u">
-      <input type="button" value="×" id="removeuser">
+      <input type="text" name="name_u" class="name_u">
+      <input type="button" value="×" id="removeuser" class="remove">
     </p>
-    <input type="button" value="+" id="adduser" style="width: 200px;margin: 3px;">
+    <input type="button" value="+" id="adduser">
 
+    <div id="removegroup">
+      <input type="button" value="×" class="remove">
+    </div>
+    
   </div>
   <input type="button" value="+" id="addgroup">
 
