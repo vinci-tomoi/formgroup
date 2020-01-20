@@ -26,12 +26,15 @@ $(function() {
   $('#save').click(() => {
     var form = $('#fileop');
     var formData = form.serializeArray();
+    // ここをグループの数だけ繰り返したい
     var formstr = '{"name":"' + formData[0].value + '","users":[';
     for ( let i = 1; i < formData.length; i++ ) {
       formstr = formstr + '"' + formData[i].value + '"' + ',';
     }
     formstr = formstr.slice(0, -1) + ']}';
+    //ここまで
     console.log(formstr);
+    formstr = JSON.parse(formstr);
     var formJson = JSON.stringify(formstr);
     setBlobUrl("download", formJson);
   });
