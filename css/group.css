@@ -48,3 +48,11 @@ body {
   border: 2px solid #a9a9a9;
   padding: 0 10px;
 }
+
+#fileop {
+  width:40%;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
