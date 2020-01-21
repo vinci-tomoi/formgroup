@@ -66,7 +66,44 @@ $(function() {
 
   };
 
+  var operation = document.forms.fileop;
 
+  operation.load.addEventListener("change", function(e) {
+    var result = e.target.files[0];
+
+    var reader = new FileReader();
+    reader.readAsText(result);
+    reader.onload = function(e){
+      var readJson = JSON.parse(reader.result);
+      console.log(readJson);
+
+
+      $.each(readJson, function(index, val) {
+        console.log(val);
+
+        if (index === 0) {
+          $('#name_g').val(val.name);
+          
+          for (var i = 0; i < val.users.length; i++) {
+
+            if (i === 0) {
+              $('#name_u').val(val.users[0]);
+            } else {
+              $('#user').after('<p id="user"><label for="name_u">ユーザ名</label><input type="text" name="name_u" id="name_u" class="name_u" form="fileop"><input type="button" value="×" id="removeuser" class="remove"></p>');
+              console.log(val.users[i]);
+            }
+
+          }
+
+          console.log(val.name);
+        }
+
+      });
+
+
+    }
+
+  })
   
 
 });
