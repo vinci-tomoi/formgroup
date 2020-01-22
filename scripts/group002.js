@@ -47,14 +47,9 @@ $(function() {
     });
 
     base = '[' + base + ']';
-    console.log(base);
-
-    base = JSON.parse(base);
-    var formJson = JSON.stringify(base);
-    // setBlobUrl("download", formJson);
 
     var link = document.createElement('a');
-    var blob = new Blob([ formJson ], { "type" : "application/x-msdownload" });
+    var blob = new Blob([ base ], { "type" : "application/x-msdownload" });
     link.href = window.URL.createObjectURL(blob);
     link.download = "user.json";
     link.click();
