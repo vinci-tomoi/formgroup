@@ -9,19 +9,23 @@
 </head>
 <body>
 
-  <form name="group" id="group">
-    <label for="name_g">グループ名</label>
-    <input type="text" name="name_g" id="name_g" class="name_g" form="fileop">
-    <p id="user">
-      <label for="name_u">ユーザ名</label>
-      <input type="text" name="name_u" id="name_u" class="name_u" form="fileop">
-      <input type="button" value="×" id="removeuser" class="remove">
-    </p>
-    <input type="button" value="+" id="adduser">
-    <div id="removegroup">
-      <input type="button" value="×" class="remove">
-    </div>
-  </form>
+  <div id ="groups">
+    <form name="group" id="group">
+      <label for="name_g">グループ名</label>
+      <input type="text" name="name_g" id="name_g" class="name_g" form="fileop">
+      <div id="users">
+      <p id="user">
+        <label for="name_u">ユーザ名</label>
+        <input type="text" name="name_u" id="name_u" class="name_u" form="fileop">
+        <input type="button" value="×" id="removeuser" class="remove">
+      </p>
+      </div>
+      <input type="button" value="+" id="adduser">
+      <div id="removegroup">
+        <input type="button" value="×" class="remove">
+      </div>
+    </form>
+  </div>
 
   <form id="add_g">
     <input type="button" value="+" id="addgroup">
