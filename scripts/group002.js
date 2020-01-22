@@ -51,20 +51,15 @@ $(function() {
 
     base = JSON.parse(base);
     var formJson = JSON.stringify(base);
-    setBlobUrl("download", formJson);
+    // setBlobUrl("download", formJson);
+
+    var link = document.createElement('a');
+    var blob = new Blob([ formJson ], { "type" : "application/x-msdownload" });
+    link.href = window.URL.createObjectURL(blob);
+    link.download = "user.json";
+    link.click();
 
   });
-  
-
-  const setBlobUrl = (id, content) => {
-
-    var blob = new Blob([ content ], { "type" : "application/x-msdownload" });
-
-    window.URL = window.URL || window.webkitURL;
-    $("#" + id).attr("href", window.URL.createObjectURL(blob));
-    $("#" + id).attr("download", "user.json");
-
-  };
 
   var operation = document.forms.fileop;
 
