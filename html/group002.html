@@ -9,27 +9,24 @@
 </head>
 <body>
 
-  <div id ="groups">
-    <form name="group" id="group">
+  <div id ="groups" class="groups">
+    <form name="group" id="group" class="group">
       <label for="name_g">グループ名</label>
       <input type="text" name="name_g" id="name_g" class="name_g" form="fileop">
-      <div id="users">
-      <p id="user">
-        <label for="name_u">ユーザ名</label>
-        <input type="text" name="name_u" id="name_u" class="name_u" form="fileop">
-        <input type="button" value="×" id="removeuser" class="remove">
-      </p>
+      <div id="users" class="users">
+        <p id="user" class="user">
+          <label for="name_u">ユーザ名</label>
+          <input type="text" name="name_u" id="name_u" class="name_u" form="fileop">
+        </p>
       </div>
       <input type="button" value="+" id="adduser">
-      <div id="removegroup">
-        <input type="button" value="×" class="remove">
-      </div>
+
     </form>
   </div>
 
-  <form id="add_g">
+  
     <input type="button" value="+" id="addgroup">
-  </form>
+ 
 
   <form name="fileop" id="fileop">
     <input type="button" id="save" value="save">
