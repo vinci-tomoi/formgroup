@@ -127,10 +127,22 @@ $(function() {
     var reader = new FileReader();
     reader.readAsText(result);
     reader.onload = function(e){
+
+      // 画面の初期化
+      if ($('#groups form').length >= 2) {
+        $('#groups form:first').nextAll('form').remove();
+        $('#groups form:first').find('div:last').remove();
+      }
+      if ($('.group p').length >= 2) {
+        $('.group p:first').nextAll('p').remove();
+        $('.group p:first').find('input:last').remove();
+      }
+
       var readJson = JSON.parse(reader.result);
-      console.log(readJson);
 
       $.each(readJson, function(index, val) {
+
+
 
         if (index === 0) {
           $('#name_g').val(val.name);
