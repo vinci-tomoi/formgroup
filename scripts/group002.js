@@ -63,6 +63,31 @@ $(function() {
 
   $('#save').click(() => {
     
+    var empty = false;
+
+    $('#groups form').each(function() {
+
+      if ($(this).find('.name_g').val() === '') {
+        alert("未入力のグループ名があります。");
+        empty = true;
+        return false;
+      }
+
+      $(this).find('p .name_u').each(function() {
+        if($(this).val() === '') {
+          alert("未入力のユーザー名があります。");
+          empty = true;
+          return false;
+        }
+      });
+
+    });
+
+    if(empty) {
+      return false;
+    }
+
+
     var form = $('#fileop');
     var formData = form.serializeArray();
 
